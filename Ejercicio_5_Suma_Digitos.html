@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Suma de los digitos de un numero</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Funcion para sumar los digitos de un numero
+        function sumarDigitos(numero) {
+
+            // Variable acumuladora
+            let suma = 0;
+
+            // Repetir mientras el numero sea mayor que 0
+            while (numero > 0) {
+
+                // Obtener el ultimo digito y sumarlo
+                suma = suma + (numero % 10);
+
+                // Eliminar el ultimo digito
+                numero = Math.floor(numero / 10);
+
+            }
+
+            // Devolver la suma total
+            return suma;
+
+        }
+
+        // Pruebas de la funcion
+        console.log(sumarDigitos(3450));
+
+        console.log(sumarDigitos(965));
+
+    </script>
+
+</body>
+
+</html>
