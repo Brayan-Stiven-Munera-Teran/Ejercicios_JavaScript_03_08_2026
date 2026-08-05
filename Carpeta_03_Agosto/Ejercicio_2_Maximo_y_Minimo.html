@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Maximo y minimo</title>
+</head>
+
+<body>
+
+    <script>
+
+        function encontrarMaximoMinimo(numeros) {
+
+            let max = numeros[0];
+            let min = numeros[0];
+
+            for (let posicion = 0; posicion < numeros.length; posicion++) {
+
+                if (numeros[posicion] > max) {
+                    max = numeros[posicion];
+                }
+
+                if (numeros[posicion] < min) {
+                    min = numeros[posicion];
+                }
+            }
+
+            return {
+                maximo: max,
+                minimo: min
+            };
+        }
+
+        let numeros = [108, -50, 30, -120, 110];
+
+        console.log(encontrarMaximoMinimo(numeros));
+
+    </script>
+
+</body>
+
+</html>

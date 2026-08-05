@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Numeros primos</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Funcion para verificar si un numero es primo
+        function esPrimo(numero) {
+
+            if (numero <= 1) {
+                return false;
+            }
+
+            for (let divisor = 2; divisor <= Math.sqrt(numero); divisor++) {
+
+                if (numero % divisor === 0) {
+                    return false;
+                }
+
+            }
+
+            return true;
+
+        }
+
+        // Funcion para mostrar los numeros primos
+        function listarPrimos(limite) {
+
+            for (let numero = 2; numero <= limite; numero++) {
+
+                if (esPrimo(numero)) {
+                    console.log(numero);
+                }
+
+            }
+
+        }
+
+        listarPrimos(100);
+
+    </script>
+
+</body>
+
+</html>
