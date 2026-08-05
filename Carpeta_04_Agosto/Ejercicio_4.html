@@ -1,0 +1,31 @@
+<!doctype html>
+<body>
+  <script>
+    function buscarCoincidencias(lista, dato) {
+      let cantidad = 0;
+      let indices = [];
+
+      // Recorre el arreglo
+      for (let elemento of lista) {
+        if (elemento === dato) {
+          cantidad++;
+        }
+      }
+
+      for (let posicion = 0; posicion < lista.length; posicion++) {
+        if (lista[posicion] === dato) {
+          indices.push(posicion);
+        }
+      }
+
+      console.log("Índices:", indices);
+      return cantidad;
+    }
+
+    // Casos de prueba
+    console.log(buscarCoincidencias([5, 8, 5, 9, 5], 5)); // 3
+    console.log(buscarCoincidencias(["x", "y", "x", "z"], "x")); // 2
+    console.log(buscarCoincidencias([10, 20, 30], 15)); // 0
+
+  </script>
+</body>
